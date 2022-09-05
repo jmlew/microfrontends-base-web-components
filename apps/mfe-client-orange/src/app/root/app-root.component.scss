@@ -1,6 +1,11 @@
 // From base path defined in workspace (stylePreprocessorOptions:includePaths)
 @import 'ui-variables/clients';
 
+:host {
+  display: block;
+  border: 2px solid orange;
+}
+
 .app-content {
   padding: $client-app-pad;
 }

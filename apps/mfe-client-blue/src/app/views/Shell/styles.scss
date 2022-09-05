@@ -1,5 +1,10 @@
 @import 'ui-variables/clients';
 
+.app-root {
+  display: block;
+  border: 1px solid rgb(0, 81, 255);
+}
+
 .app-content {
   padding: $client-app-pad;
 }

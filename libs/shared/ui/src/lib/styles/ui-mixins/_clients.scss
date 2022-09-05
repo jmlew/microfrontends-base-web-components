@@ -14,8 +14,6 @@
 @mixin client-app-root() {
   display: block;
   width: 100%;
-  border: 1px solid $color-grey-400;
-  border-radius: 4px;
   background-color: $color-grey-50;
 }
 
