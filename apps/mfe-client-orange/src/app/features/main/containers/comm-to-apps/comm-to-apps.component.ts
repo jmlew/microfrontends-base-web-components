@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Observable } from 'rxjs';
 
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {
   ClientAppDetails,
   CommType,
@@ -8,6 +8,7 @@ import {
 } from '@microfr/shared/model/app-interface';
 import { EvtBusEventType } from '@microfr/shared/util/event-bus-dom';
 import { EvtBusActionType } from '@microfr/shared/util/event-bus-obs';
+
 import {
   AppInterfaceFacadeService,
   EvtBusDomService,
@@ -37,9 +38,6 @@ export class CommToAppsComponent {
   onSendMessage(data: ClientAppDetails) {
     const commType: CommType = this.commState.commTypeValue;
     switch (commType) {
-      case CommType.ComponentProp:
-        console.log('CommType.ComponentProp WIP...');
-        break;
       case CommType.EvtBusDom:
         this.evtBusDom.dispatch(EvtBusEventType.ChangeClientInfo, data);
         break;
@@ -49,6 +47,9 @@ export class CommToAppsComponent {
           payload: data,
         });
         break;
+      /* case CommType.ComponentProp:
+            console.log('CommType.ComponentProp WIP...');
+            break; */
     }
   }
 }

@@ -109,9 +109,9 @@ class AppInterfaceFacadeHelper {
       case CommType.EvtBusDom:
         console.log(`Event received by ${appConfig.label}:`, data);
         break;
-      case CommType.ComponentProp:
+      /* case CommType.ComponentProp:
         console.log(`App input changes on ${appConfig.label}: `, data);
-        break;
+        break; */
     }
   }
 }

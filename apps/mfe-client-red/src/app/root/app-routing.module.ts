@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { fooRoutes } from '../features/foo/foo.routes';
 import { EmptyView } from '../views/empty/empty.view';
 import { ShellView } from '../views/shell/shell.view';
-import { appRouteConfig } from './app-route-config.constant';
+import { appRouteConfig } from './app-route-config.routes';
 
 /**
  * Main routes for a micro-frontends implimentation of app.

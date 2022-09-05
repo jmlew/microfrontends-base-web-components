@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { appRouteConfig } from '../../../../root/app-route-config.constant';
+import { appRouteConfig } from '../../../../root/app-route-config.routes';
 import { RouteItem } from '../../../../shared/models/routes.model';
 
 @Component({

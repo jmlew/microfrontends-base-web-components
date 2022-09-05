@@ -6,7 +6,7 @@
     "nx": "nx",
     "start": "npm run build && npm run serve",
     "------ SERVE: DIST FILES ------": "",
-    "serve": "npm run serve:shell & npm run serve:client-red & npm run serve:client-blue & npm run serve:client-orange",
+    "serve": "npm run serve:shell & npm run serve:clients",
     "serve:shell": "live-server dist/apps/mfe-shell --no-browser --port=6600",
     "serve:clients": "npm run serve:client-red & npm run serve:client-blue & npm run serve:client-orange",
     "serve:client-red": "live-server dist/apps/mfe-client-red --no-browser --port=6610",

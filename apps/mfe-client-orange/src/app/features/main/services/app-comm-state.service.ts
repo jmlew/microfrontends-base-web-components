@@ -1,9 +1,10 @@
-import { Injectable, OnDestroy } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { distinctUntilChanged, takeUntil } from 'rxjs/operators';
 
+import { Injectable, OnDestroy } from '@angular/core';
 import { CommType } from '@microfr/shared/model/app-interface';
 import { destroy } from '@microfr/shared/util/common';
+
 import { AppInterfaceFacadeService } from '../../../core/services';
 
 @Injectable()
@@ -11,9 +12,7 @@ export class AppCommState implements OnDestroy {
   private unsubscribe: Subject<unknown> = new Subject();
 
   // State property streams.
-  private commType: BehaviorSubject<CommType> = new BehaviorSubject(
-    CommType.ComponentProp
-  );
+  private commType: BehaviorSubject<CommType> = new BehaviorSubject(CommType.EvtBusObs);
 
   constructor(private readonly appInterface: AppInterfaceFacadeService) {
     this.syncCommTypeToAppInterface();

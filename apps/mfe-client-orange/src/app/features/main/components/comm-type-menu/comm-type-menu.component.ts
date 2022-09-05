@@ -6,9 +6,9 @@ import {
   Output,
 } from '@angular/core';
 import { MatRadioChange } from '@angular/material/radio';
-
 import { CommType } from '@microfr/shared/model/app-interface';
 import { PropStringMap } from '@microfr/shared/model/common';
+
 import * as fromConstants from '../../constants';
 
 @Component({
@@ -21,11 +21,7 @@ export class CommTypeMenuComponent {
   @Input() commType: CommType;
   @Output() selectCommType = new EventEmitter<CommType>();
 
-  commTypes: CommType[] = [
-    CommType.ComponentProp,
-    CommType.EvtBusDom,
-    CommType.EvtBusObs,
-  ];
+  commTypes: CommType[] = [CommType.EvtBusDom, CommType.EvtBusObs];
   commTypeLabelsMap: PropStringMap = fromConstants.commTypeLabelsMap;
 
   onSelectCommType(change: MatRadioChange) {

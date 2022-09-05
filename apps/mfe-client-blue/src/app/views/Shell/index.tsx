@@ -1,12 +1,14 @@
-import { Container } from '@material-ui/core';
-import React, { Fragment, useEffect, useState } from 'react';
-import { Subject } from 'rxjs';
-import { filter, takeUntil } from 'rxjs/operators';
 import './styles.scss';
 
+import React, { Fragment, useEffect, useState } from 'react';
+import { Route } from 'react-router-dom';
+import { Subject } from 'rxjs';
+import { filter, takeUntil } from 'rxjs/operators';
+
+import { Container } from '@material-ui/core';
 import { ClientAppDetails } from '@microfr/shared/model/app-interface';
 import * as fromCommonUtils from '@microfr/shared/util/common';
-import { Route } from 'react-router-dom';
+
 import { appInterface } from '../../core/helpers';
 import FooMain from '../../features/foo/views/FooMain';
 import AppHeader from '../../layout/AppHeader/Header';
@@ -48,7 +50,7 @@ export default function ShellView(props: ShellViewProps) {
 
   const featureFooRoutePath: string = appRouteConfig.featureFoo.name;
   return (
-    <Fragment>
+    <div className="app-root">
       <AppHeader appName={appName} />
       <div className="app-content">
         <AppDetails appDescription={appDescription} />
@@ -56,6 +58,6 @@ export default function ShellView(props: ShellViewProps) {
           <FooMain />
         </Route>
       </div>
-    </Fragment>
+    </div>
   );
 }

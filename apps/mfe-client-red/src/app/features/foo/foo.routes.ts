@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-import { appRouteConfig } from '../../root/app-route-config.constant';
+import { appRouteConfig } from '../../root/app-route-config.routes';
 import * as fromFooAViews from '../foo-a/views';
 import * as fromFooBViews from '../foo-b/views';
 import * as fromViews from './views';

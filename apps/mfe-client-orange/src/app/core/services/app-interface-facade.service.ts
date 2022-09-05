@@ -1,7 +1,7 @@
-import { Injectable, OnDestroy } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { distinctUntilChanged, filter, takeUntil } from 'rxjs/operators';
 
+import { Injectable, OnDestroy } from '@angular/core';
 import {
   ClientApp,
   ClientAppMessage,
@@ -10,6 +10,7 @@ import {
 } from '@microfr/shared/model/app-interface';
 import { EvtBusEventItem, EvtBusEventType } from '@microfr/shared/util/event-bus-dom';
 import { EvtBusAction, EvtBusActionType } from '@microfr/shared/util/event-bus-obs';
+
 import { appConfig } from '../constants';
 import { EvtBusDomService } from './evt-bus-dom.service';
 import { EvtBusObservablesService } from './evt-bus-obs.service';
@@ -118,9 +119,9 @@ export class AppInterfaceFacadeService implements OnDestroy {
       case CommType.EvtBusDom:
         console.log(`Event received by ${appConfig.label}:`, data);
         break;
-      case CommType.ComponentProp:
+      /* case CommType.ComponentProp:
         console.log(`App input changes on ${appConfig.label}: `, data);
-        break;
+        break; */
     }
   }
 }
